@@ -1,0 +1,26 @@
+.NavBar{
+    position: fixed;
+    width: 250px;
+    height: 450px;
+    z-index: 3;
+    top: 20%;
+    left: 2%;
+    border-radius:25px;
+    background-color:rgba(255, 255, 255, 0.10);
+    border: 1px solid white;
+    color: white;
+}
+
+.NavBarTitle{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+ul{
+    list-style: none;
+}
+
+.NavBarLink{
+    text-decoration: none;
+    color: white;
+}
