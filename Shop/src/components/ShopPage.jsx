@@ -6,7 +6,6 @@ import NavBar from './NavBar'
 function ShopPage() {
   return (
     <>
-    <NavBar/>
     <div className='Content'>
       <h1>Shop</h1>
       <Link to="HomePage" className='Link'>See Products</Link>

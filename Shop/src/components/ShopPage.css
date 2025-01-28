@@ -48,8 +48,10 @@ video{
     border-radius: 1.5rem;
     border: 1px solid white;
     font-size: 20px;
+    transition: 0.15s ease-in;
 }
 
 .Link:hover{
     background-color:rgba(255, 255, 255, 0.242);
+    transition: 0.2s ease-in;
 }

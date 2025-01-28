@@ -9,18 +9,119 @@
     background-color:rgba(255, 255, 255, 0.10);
     border: 1px solid white;
     color: white;
+    transition: 0.5s ease-in;
+    
 }
 
-.NavBarTitle{
+.NavBar>.NavBarTitle{
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
 }
 
-ul{
+.NavBar>.NavBarTitle>button{
+    background: none;
+    border:1px solid white;
+    color: white;
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+    transition: 0.2s ease-in;
+}
+
+.NavBar>.UlNavBar{
     list-style: none;
+    padding: 0;
+    text-align: center;
 }
 
-.NavBarLink{
+.NavBar> .UlNavBar > li{
+    margin: 1em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.NavBar > .UlNavBar > li > .NavBarLink{
     text-decoration: none;
     color: white;
+    border: 1px solid white;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1.5em;
+    white-space: nowrap;
+    overflow:hidden;
+    transition: 0.2s ease-in;
 }
+
+
+.ReducedNavBar{
+    position: fixed;
+    width: 100px;
+    height: 450px;
+    z-index: 3;
+    top: 20%;
+    left: 2%;
+    border-radius:25px;
+    background-color:rgba(255, 255, 255, 0.10);
+    border: 1px solid white;
+    color: white;
+    transition: 0.75s ease-out;
+}
+
+.ReducedNavBar>.NavBarTitle{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ReducedNavBar>.NavBarTitle>button{
+    background: none;
+    border:1px solid white;
+    color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+
+.ReducedNavBar>.UlNavBar{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.ReducedNavBar> .UlNavBar > li{
+    margin: 50px 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ReducedNavBar > .UlNavBar > li > .NavBarLink{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 1.5em;
+    transition: 0.2s ease-in;
+}
+
+.ReducedNavBar > .UlNavBar > li > .NavBarLink > img{
+    filter: invert(100%); 
+    width:25px
+}
+
+.NavBarLink:hover{
+    background-color:rgba(255, 255, 255, 0.242);
+    transition: 0.25s ease-in;
+}
+
+.NavBarTitle>button:hover{
+    cursor: pointer;
+    background:rgba(255, 255, 255, 0.242);
+    transition: 0.25s ease-in;
+ }
+ 

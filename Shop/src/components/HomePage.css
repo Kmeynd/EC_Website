@@ -1,0 +1,32 @@
+body{
+    background-color: #2D3C3E;
+}
+
+.Header{
+    height: 15vh;
+    background-color: #9E9584;
+    display: grid;
+    grid-template-columns: 80vw 20vw;
+}
+.SearchBar{
+    grid-area: 1/1/2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SearchBar>input{
+    height: 20%;
+    width: 15%;
+    
+}
+
+.SavedItems{
+    grid-area: 1/2/2/3;
+    display: flex;
+    align-items: center;
+}
+
+.SavedItems>*{
+    margin: 0 2vw;
+}
