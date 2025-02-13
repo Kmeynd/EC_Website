@@ -1,5 +1,6 @@
 body{
     background-color: #2D3C3E;
+    overflow-x: hidden;
 }
 
 .Header{
@@ -7,6 +8,7 @@ body{
     background-color: #9E9584;
     display: grid;
     grid-template-columns: 80vw 20vw;
+    margin: 0;
 }
 .SearchBar{
     grid-area: 1/1/2/3;
@@ -45,17 +47,53 @@ body{
 }
 
 .Items{
-    background-color: white;
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    text-decoration: none;
 }
+.Items:hover{
+    transform: scale(1.1);
+}
+
+.Items>img{
+    max-width: 100px;
+    max-height: 100px;
+}
+
 .Description{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
 }
 .Description>p{
-    overflow: hidden; 
-    width: 30%; 
-    max-height: 75px;  
+    text-align: center;
+    overflow: hidden;
+    /* white-space: nowrap;  */
+    width: 40%; 
+    max-height: 75px; 
+    color: black;
+}
+
+.Items>button{
+    background: #8C9C9C;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2em;
+    height: 2em;
+    width: 50%;
+}
+
+.Items>button:hover{
+    color: white;
+    background-color: #5e7272;
+}
+
+.Footer{
+    height: 15vh;
 }

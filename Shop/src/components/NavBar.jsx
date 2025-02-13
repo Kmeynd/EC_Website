@@ -21,7 +21,7 @@ function NavBar (){
                 <ul className='UlNavBar'>
                     <li><Link to="/" className='NavBarLink'><img src={welcome} alt="Front Page" /></Link></li>
                     <li><Link to="/HomePage" className='NavBarLink'><img src={home} alt="Home" /></Link></li>
-                    <li><Link className='NavBarLink'><img src={shoppingCart} alt="Cart" /></Link></li>
+                    <li><Link to="/CartPage" className='NavBarLink'><img src={shoppingCart} alt="Cart" /></Link></li>
                 </ul>
             </div>
         )
@@ -40,7 +40,7 @@ function NavBar (){
                 <ul className='UlNavBar'>
                     <li><Link to="/" className='NavBarLink'>Front Page</Link></li>
                     <li><Link to="/HomePage" className='NavBarLink'>Home Page</Link></li>
-                    <li><Link className='NavBarLink'>Cart</Link></li>
+                    <li><Link  to="/CartPage" className='NavBarLink'>Cart</Link></li>
                 </ul>
             </div>
         )

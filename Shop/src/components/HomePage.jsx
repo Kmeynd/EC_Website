@@ -1,6 +1,6 @@
-import NavBar from './NavBar'
 import './HomePage.css'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function HomePage (){
     const url = 'https://fakestoreapi.com/products'
@@ -18,24 +18,25 @@ function HomePage (){
     
 
     function Item(data){
-        if (!data){
-            return(
-                <p>Loading</p>
-            )
-        }
+        
         return(
-            <div className="Items">
-                <img src={data['image']} alt=""  width={100}/>
+            <Link to="/ItemPage" className="Items" key={data['title']} state={data}>
+                <img src={data['image']} alt=""  />
                 <div className='Description'>
                     <p>{data['title']}</p>
-                    <p>{data['price']}</p>
+                    <p>{data['price']}$</p>
                 </div>
-                <button className="Add" />
-            </div>
+                <button className="Add" >Add to cart</button>
+            </Link>
         )
     }
     
     function EveryItems(data){
+        if (data==undefined){
+            return(
+                <p>Loading</p>
+            )
+        }
         let listItem = []
         for(let i of data){
             listItem.push(Item(i))
@@ -58,6 +59,9 @@ function HomePage (){
             {
                 EveryItems(data)
             }
+           </div>
+           <div className='Footer'>
+            <p>Info</p>
            </div>
         </div>
     )
