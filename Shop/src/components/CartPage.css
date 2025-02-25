@@ -1,0 +1,15 @@
+.Cart{
+    margin:5vh 10vw 0 20vw  ;
+    border: solid 2px black;
+}
+.Articles>ul>li{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 40%;
+    margin:10px
+    
+}
+.Articles>ul>li>img{
+    margin:10px;
+}

@@ -5,7 +5,7 @@ import home from '../assets/home.png'
 import shoppingCart from '../assets/shopping-cart.png'
 import welcome from '../assets/welcome-back.png'
 
-function NavBar (){
+function NavBar (prop){
     const [state, setstate] = useState(0)
 
     function ReduceNavBar(){
@@ -19,9 +19,9 @@ function NavBar (){
                     <button onClick={ChangeStateIncrease}>{'>'}</button>
                </div>
                 <ul className='UlNavBar'>
-                    <li><Link to="/" className='NavBarLink'><img src={welcome} alt="Front Page" /></Link></li>
-                    <li><Link to="/HomePage" className='NavBarLink'><img src={home} alt="Home" /></Link></li>
-                    <li><Link to="/CartPage" className='NavBarLink'><img src={shoppingCart} alt="Cart" /></Link></li>
+                    <li><Link to="/" className='NavBarLink' onClick={()=>{prop.theme('shop')}}><img src={welcome} alt="Front Page" /></Link></li>
+                    <li><Link to="/HomePage" className='NavBarLink'onClick={()=>{prop.theme('')}}><img src={home} alt="Home" /></Link></li>
+                    <li><Link to="/CartPage" className='NavBarLink' onClick={()=>{prop.theme('')}}><img src={shoppingCart} alt="Cart" /></Link></li>
                 </ul>
             </div>
         )
@@ -38,9 +38,9 @@ function NavBar (){
                     <button onClick={ChangeStateReduce}>{'<'}</button>
                </div>
                 <ul className='UlNavBar'>
-                    <li><Link to="/" className='NavBarLink'>Front Page</Link></li>
-                    <li><Link to="/HomePage" className='NavBarLink'>Home Page</Link></li>
-                    <li><Link  to="/CartPage" className='NavBarLink'>Cart</Link></li>
+                    <li><Link to="/" className='NavBarLink' onClick={()=>{prop.theme('shop')}}>Front Page</Link></li>
+                    <li><Link to="/HomePage" className='NavBarLink' onClick={()=>{prop.theme('')}}>Home Page</Link></li>
+                    <li><Link  to="/CartPage" className='NavBarLink' onClick={()=>{prop.theme('')}}>Cart</Link></li>
                 </ul>
             </div>
         )
@@ -52,11 +52,6 @@ function NavBar (){
     }else{
         return IncreaseNavBar()
     }
-    // if (props.NavBarSize == 1){
-    //     return ReduceNavBar()
-    // }else{
-    //     return IncreaseNavBar()
-    // }
     
 }
 

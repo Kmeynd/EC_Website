@@ -1,10 +1,14 @@
 import './HomePage.css'
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import {  useEffect, useState } from 'react'
+import { Link,useOutletContext } from 'react-router-dom'
+import Header from "./Header"
+
 
 function HomePage (){
     const url = 'https://fakestoreapi.com/products'
     const [data, setData] = useState("")
+    
+    const item = useOutletContext();
 
     useEffect(()=>{
         fetch(`${url}`)
@@ -12,13 +16,12 @@ function HomePage (){
             .then(json=>{
                 setData(json)
             })
-
-    },[])
-    
-    
-
-    function Item(data){
         
+    },[])
+
+    
+    function Item(data){
+
         return(
             <Link to="/ItemPage" className="Items" key={data['title']} state={data}>
                 <img src={data['image']} alt=""  />
@@ -26,7 +29,7 @@ function HomePage (){
                     <p>{data['title']}</p>
                     <p>{data['price']}$</p>
                 </div>
-                <button className="Add" >Add to cart</button>
+                {/* <button className="Add" onClick={Adding} >Add to cart</button> */}
             </Link>
         )
     }
@@ -46,15 +49,7 @@ function HomePage (){
 
     return(
         <div>
-            <div className='Header'>
-                <div className='SearchBar'>
-                    <input  type="text" placeholder='Shirt...'/>
-                </div>
-                <div className='SavedItems'>
-                    <img src="" alt="<3" />
-                    <img src="" alt="$" />
-                </div>
-            </div>
+            <Header item={item.numItem}/> 
            <div className='DisplayItems'>
             {
                 EveryItems(data)
