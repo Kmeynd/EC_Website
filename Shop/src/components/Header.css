@@ -27,7 +27,8 @@
 .SavedItems>*{
     margin: 0 2vw;
     display: flex;
+    align-items: center;
 }
 .SavedItems>*>p{
-    margin:0
+    margin:0 5px
 }

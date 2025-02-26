@@ -5,19 +5,21 @@ import Header from './Header'
 function CartPage(){
 
     const item = useOutletContext()
-    console.log(item.numItem.itemBuy)
-
+    // console.log(item.numItem.itemBuy)
+    const i = 0
     return (
         <>
         <Header  item={item.numItem}/>
         <div className='Cart'>
             <div className='Articles'>
                 <ul>
-                    {item.numItem.itemBuy.map((article)=>{
+                    {item.numItem.itemBuy.map((article,value)=>{
+                        console.log(value)
                         return(
-                            <li key={article['title']}>
+                            <li key={value}>
                                 <img src={article['image']} alt="" width={50}/>
-                                <p>{article['title']}</p>                       
+                                <p>{article['title']}</p>
+                                <button onClick={()=>{item.DeleteItem(value)}}>Delete</button>                       
                             </li>
                         ) 
                         

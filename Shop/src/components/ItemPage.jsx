@@ -11,13 +11,14 @@ function ItemPage(){
 
     return(
         <div>
-            <Header item={item.numItem}/>
+            <Header item={item.numItem} />
             <div className="ItemDisplay">
                 <img src={obj['image']} alt=""/>
                 <div className="ItemDisplayDescription">
                     <h1>{obj['title']}</h1>
                     <p>{obj['description']}</p>
                     <p>{obj['price']} $</p>
+                    <button onClick={()=>{item.LikeItem(obj)}} >Like</button>
                     <button onClick={()=>{item.AddItem(obj,obj['price'])}}>Add to the cart</button>
                 </div>
             </div>
