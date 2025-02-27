@@ -17,9 +17,9 @@ function ItemPage(){
                 <div className="ItemDisplayDescription">
                     <h1>{obj['title']}</h1>
                     <p>{obj['description']}</p>
-                    <p>{obj['price']} $</p>
+                    <h3>{obj['price']} $</h3>
                     <button onClick={()=>{item.LikeItem(obj)}} >Like</button>
-                    <button onClick={()=>{item.AddItem(obj,obj['price'])}}>Add to the cart</button>
+                    <button onClick={()=>{item.AddItem(obj)}}>Add to the cart</button>
                 </div>
             </div>
         </div>

@@ -1,15 +1,64 @@
 .Cart{
     margin:5vh 10vw 0 20vw  ;
-    border: solid 2px black;
+    height: 75vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+}
+.Articles{
+    width: 50%;
+}
+.Articles>h1{
+    margin: 0;
+    text-align: center;
+}
+.Articles>ul{
+    min-height: 30%;
 }
 .Articles>ul>li{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: white;
-    width: 40%;
-    margin:10px
+    border: solid 1px black;
+    width: 80%;
+    height: 80px;
+    margin:10px;
+    box-shadow: 5px 5px 5px rgb(177, 177, 177);
+    
     
 }
 .Articles>ul>li>img{
     margin:10px;
+    max-height: 95%;
+}
+.Articles>ul>li>div{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+}
+.Articles>ul>li>div>p{
+    height: 25%;
+    overflow: hidden;
+}
+
+.Articles>ul>li>button{
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    border:none;
+    background-color:rgb(188, 0, 0);
+    margin-right: 10px;
+}
+
+.Articles>ul>li>button:hover{
+    background-color:red ;
+}
+
+.ProceedToPay{
+    margin:5% 5% 0 5%;
+    width: 40%;
+    height: 300px;
+    border: 2px solid black;
+    background-color: grey;
 }

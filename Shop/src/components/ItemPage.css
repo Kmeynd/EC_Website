@@ -1,9 +1,9 @@
 .ItemDisplay{
 position: relative;
 left: 25vw;
-top: 25vh;
-width: 50vw;
-height: 50vh;
+top: 10vh;
+width: 60vw;
+height: 65vh;
 background-color: white;
 display: flex;
 justify-content: space-evenly;
@@ -17,14 +17,21 @@ align-items: center;
 
 .ItemDisplayDescription{
     text-align: center;
-    width: 50%;
+    width: 60%;
 }
 
 .ItemDisplayDescription>button{
     height: 50px;
     width: 100px; 
+    margin:0 2em 0 2em ;
     border-radius: 10px;
     border: none;
     background-color: black;
     color: white;
+    
+}
+
+.ItemDisplayDescription>button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }

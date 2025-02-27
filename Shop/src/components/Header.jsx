@@ -1,6 +1,7 @@
 import './Header.css'
 import heart from '../assets/heart.png'
 import dollar from '../assets/dollar.png'
+import { Link } from 'react-router-dom'
 
 function Header(prop){
 
@@ -14,10 +15,10 @@ function Header(prop){
                     <p>{prop.item.itemLiked.length}</p>
                     <img src={heart} alt="<3" width={25} />
                 </div>
-                <div>
+                <Link to={"/CartPage"} className='LinkHeader'>
                     <p>{prop.item.price}</p>
                     <img src={dollar} alt="$" width={25} />
-                </div>
+                </Link>
             </div>
         </div>
     )

@@ -19,7 +19,6 @@ function HomePage (){
         
     },[])
 
-    
     function Item(data){
 
         return(
