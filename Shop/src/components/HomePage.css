@@ -23,6 +23,7 @@ body{
     align-items: center;
     justify-content: space-around;
     text-decoration: none;
+    transition: 0.3s ease;
 }
 .Items:hover{
     transform: scale(1.1);
@@ -43,10 +44,65 @@ body{
 .Description>p{
     text-align: center;
     overflow: hidden;
-    /* white-space: nowrap;  */
     width: 40%; 
     max-height: 75px; 
     color: black;
+}
+
+.LoaderParent{
+    height: 85vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Loader{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border:15px solid black;
+    border-top-color:#4CCEAC ;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading{
+    from{
+        transform: rotate(0turn)
+    }
+    to{
+        transform:rotate(1turn)
+    }
+}
+
+
+.Carousel{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.Carousel>img{
+    height: 100%;
+    filter:brightness(70%);
+    transition: 0.5s;
+}
+
+.Carousel>img:hover{
+    scale: 1.05;
+}
+
+.Carousel>div{
+    color: white;
+    position: absolute;
+    top:40vh;
+    right:8vw;
+    width:25vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .Footer{

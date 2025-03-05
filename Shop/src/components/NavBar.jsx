@@ -4,6 +4,7 @@ import { useState } from 'react'
 import home from '../assets/home.png'
 import shoppingCart from '../assets/shopping-cart.png'
 import welcome from '../assets/welcome-back.png'
+import shop from '../assets/shop.png'
 
 function NavBar (){
     const [state, setstate] = useState(0)
@@ -15,7 +16,7 @@ function NavBar (){
         return(
             <div className="ReducedNavBar">
                <div className='NavBarTitle'>
-                    <h3>Shop</h3>
+                    <img src={shop} alt="Shop" width={50}/>
                     <button onClick={ChangeStateIncrease}>{'>'}</button>
                </div>
                 <ul className='UlNavBar'>

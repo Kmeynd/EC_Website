@@ -1,6 +1,5 @@
 import { useLocation, useOutletContext } from "react-router-dom"
 import './ItemPage.css'
-import { useState } from "react"
 import Header from "./Header"
 
 function ItemPage(){

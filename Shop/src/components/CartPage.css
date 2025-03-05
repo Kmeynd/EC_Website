@@ -1,7 +1,13 @@
+.bgCart{
+    height: 100vh;
+    /* background-color: grey; */
+}
+
+
 .Cart{
     margin:5vh 10vw 0 20vw  ;
-    height: 75vh;
-    background-color: white;
+    min-height: 75vh;
+    /* background-color: white; */
     display: flex;
     justify-content: space-between;
 }
@@ -9,10 +15,13 @@
     width: 50%;
 }
 .Articles>h1{
-    margin: 0;
+    margin:10px 0 0 0;
     text-align: center;
+    color: white;
 }
 .Articles>ul{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white ;
     min-height: 30%;
 }
 .Articles>ul>li{
@@ -24,7 +33,7 @@
     width: 80%;
     height: 80px;
     margin:10px;
-    box-shadow: 5px 5px 5px rgb(177, 177, 177);
+    /* box-shadow: 5px 5px 5px rgb(0, 0, 0); */
     
     
 }
@@ -32,12 +41,12 @@
     margin:10px;
     max-height: 95%;
 }
-.Articles>ul>li>div{
+.Articles>ul>li>div,.LinkLike>div{
     width: 60%;
     height: 100%;
     text-align: center;
 }
-.Articles>ul>li>div>p{
+.Articles>ul>li>div>p, .LinkLike>div>p{
     height: 25%;
     overflow: hidden;
 }
@@ -55,10 +64,72 @@
     background-color:red ;
 }
 
+.LinkLike{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+.LinkLike>img{
+    max-height: auto
+}
+.LinkLike>div>p{
+    color: black;
+}
+
 .ProceedToPay{
     margin:5% 5% 0 5%;
     width: 40%;
     height: 300px;
-    border: 2px solid black;
-    background-color: grey;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ProceedToPay>p{
+    margin: 10px 0 0 0;
+}
+
+.ProceedToPay>button{
+    margin: 10px 0 0 0;
+    width: 75%;
+    height: 40px;
+    border-radius: 5px;
+    border:none;
+    background-color: #4CCEAC ;
+    transition: 0.2s ease;
+}
+
+.ProceedToPay>button:hover{
+    background-color: black;
+    color:white;
+    cursor: pointer;
+}
+
+.Promo{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+    width: 75%;
+    text-align: center;
+    
+}
+.Promo>p{
+    padding: 0;
+    margin:0 0 10px 0;
+}
+.Promo>input{
+    margin-right: 10px;
+    height: 25px;
+    
+}
+
+.Promo>button{
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
