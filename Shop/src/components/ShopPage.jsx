@@ -21,8 +21,14 @@ function ShopPage() {
     }
   },[loctheme.pathname])
   
-  function AddItem(obj){
-    plusItem({itemBuy:[...numItem['itemBuy'],obj],itemLiked:[...numItem['itemLiked']],price:(parseFloat(numItem['price'])+obj.price).toFixed(2)})
+  function AddItem(obj,numArt){
+    const arrObj = []
+    let i = 0  
+    while (i<numArt){
+      arrObj.push(obj)
+      i++
+    }
+    plusItem({itemBuy:[...numItem['itemBuy'],...arrObj],itemLiked:[...numItem['itemLiked']],price:(parseFloat(numItem['price'])+obj.price*numArt).toFixed(2)})
   }
 
   function DeleteItem(value){

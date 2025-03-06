@@ -129,3 +129,33 @@
     transition: 0.25s ease-in;
  }
  
+
+
+ @media only screen and (max-width: 800px) {
+    .NavBar{
+    background-color: black;
+    border: 1px solid  white;
+    }
+    .ReducedNavBar{
+        background-color: black;
+        border: 1px solid  white;
+        width: 50px;
+    }
+    .ReducedNavBar > .UlNavBar > li{
+        margin: 20px 0;
+        justify-content: center;
+    }
+
+    .ReducedNavBar > .UlNavBar > li > .NavBarLink{
+        width: 30px;
+        padding: 5px;
+    }
+    .ReducedNavBar > .UlNavBar > li > .NavBarLink > img{
+        width: 25px;
+        
+    }
+    .ReducedNavBar>.NavBarTitle>img{
+        width: 25px;
+        filter: invert(100%);
+    }
+ }

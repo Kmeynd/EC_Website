@@ -1,8 +1,10 @@
 import'./CartPage.css'
 import { useOutletContext,Link } from "react-router-dom"
 import Header from './Header'
+import Footer from './Footer'
 
 function CartPage(){
+    window.scrollTo(0,0)
 
     const item = useOutletContext()
     
@@ -67,7 +69,9 @@ function CartPage(){
                 <button>PROCEED TO CHECKOUT</button>
             </div>
         </div>
+        <Footer/>
         </div>
+        
         
     )
 }

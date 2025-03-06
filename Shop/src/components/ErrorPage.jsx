@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 
 function ErrorPage(){
     return (
-        <>
-         <h1>You are LOST!</h1>
-         <Link to="/">Come back home</Link>
-        </>
+        <div className="Error">
+            <h1>It looks like you are lost...</h1>
+            <Link to="/">Come back home</Link>
+        </div>
        
     )
 }

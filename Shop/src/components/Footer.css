@@ -1,0 +1,121 @@
+.FooterContainer{
+    background-color: black;
+    height: 50vh;
+    color: white;
+    margin-top: 50px;
+
+}
+
+
+.Footer{
+    margin-left: 25vw;
+    display:flex;
+    justify-content: space-around;
+    height: 40vh;
+    
+}
+
+.Footer>div{
+    margin-top: 2vh;
+    height: 35vh;
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+
+.Footer>div:not(:last-child){
+    border-right: solid 1px white;
+}
+
+.Footer>div>a{
+    text-decoration: none;
+    color: white;
+    margin:5px 0;
+}
+
+.Contact>div:not(.Sns){
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.Contact>div:not(.Sns)>img{
+    width: 20px;
+    margin-right: 15px;
+    filter: invert(100%);
+}
+
+.Contact>div>a{
+    color: white;
+}
+
+.Newsletter>p, .Contact>div>p{
+    margin: 0;
+}
+
+.Sns{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Sns>img{
+    width: 20px;
+    margin-right: 15%;
+    filter: invert(100%);
+}
+
+.Newsletter>div{
+    margin:20% 0;
+    border: 2px solid white;
+    height: 30px;
+    width: 220px;
+    
+
+}
+
+.Newsletter>div>input{
+    width: 65%;
+    height: 97%;
+    outline: 0px solid;
+    border: none;
+}
+.Newsletter>div>button{
+    width: 33%;
+    height: 97%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding-top: 2px;
+}
+
+.Newsletter>div>button:hover{
+    background-color: #4CCEAC;
+    border: none;
+}
+
+.PersoInfo{
+    border-top: 1px solid white;
+    text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+    .FooterContainer{
+        height: auto;
+    }
+    
+    .Footer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .Footer>div:not(:last-child){
+        border-right:1px solid black
+    }
+
+    .Footer>div{
+        width: 60%;
+    }
+}

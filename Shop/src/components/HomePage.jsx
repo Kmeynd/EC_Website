@@ -2,6 +2,7 @@ import './HomePage.css'
 import {  useEffect, useState } from 'react'
 import { Link,useOutletContext } from 'react-router-dom'
 import Header from "./Header"
+import Footer from "./Footer"
 import img3 from "../assets/images/3img.jpg"
 
 
@@ -68,9 +69,7 @@ function HomePage (){
                 EveryItems(data)
             }
            </div>
-           <div className='Footer'>
-            <p>Info</p>
-           </div>
+           <Footer/>
         </div>
     )
 }

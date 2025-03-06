@@ -36,7 +36,7 @@ function Header(prop){
 
 
     function changeInput (e){
-        // Have to enable user from looking up while content is loading
+        // Have to stop user from looking up while content is loading
         if(data!='Loading'){
         setItemSearch(e.target.value)
         setSearching('Searching')

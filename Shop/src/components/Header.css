@@ -127,8 +127,38 @@
 .Unfocus{
     position:fixed;
     width: 100%;
-    /* top: 15vh; */
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .Header>.logo>img{
+        width: 40px;
+    }
+
+    .SearchBar>input{
+        width: 30%;
+    }
+
+    .LinkHeader>img{
+        width: 20px;
+    }
+
+    .SavedItems{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .SavedItems>*{
+        margin:0
+    }
+
+    .Searching{
+        width: 100vw;
+        left: 0;
+    }
 }

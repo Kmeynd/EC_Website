@@ -1,13 +1,10 @@
 .bgCart{
     height: 100vh;
-    /* background-color: grey; */
 }
-
 
 .Cart{
     margin:5vh 10vw 0 20vw  ;
     min-height: 75vh;
-    /* background-color: white; */
     display: flex;
     justify-content: space-between;
 }
@@ -32,9 +29,7 @@
     border: solid 1px black;
     width: 80%;
     height: 80px;
-    margin:10px;
-    /* box-shadow: 5px 5px 5px rgb(0, 0, 0); */
-    
+    margin:10px;  
     
 }
 .Articles>ul>li>img{
@@ -52,7 +47,7 @@
 }
 
 .Articles>ul>li>button{
-    border-radius: 50px;
+    border-radius: 10px;
     width: 30px;
     height: 30px;
     border:none;
@@ -132,4 +127,32 @@
     color: white;
     border: none;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .Cart{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .Cart>*{
+        width: 90vw;
+    }
+
+    .Articles{
+        margin-left:5vw ;
+    }
+
+    .Articles>ul{
+        padding: 0;
+    }
+    .Articles>ul>li,.LinkLike{
+        width: 100%;
+        margin: 0;
+    }
+
+    .ProceedToPay{
+        height: 400px;
+    }
 }

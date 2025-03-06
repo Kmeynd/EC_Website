@@ -8,6 +8,7 @@ background-color: white;
 display: flex;
 justify-content: space-evenly;
 align-items: center;
+margin-bottom: 20vh;
 }
 
 .ItemDisplay>img{
@@ -35,3 +36,34 @@ align-items: center;
     transform: scale(1.1);
     cursor: pointer;
 }
+
+.ItemDisplayDescription>input{
+    width: 50px;
+}
+
+@media only screen and (max-width: 800px) {
+  .ItemDisplay{
+    top:5vh;
+    left:5vw;
+    width: 90vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .ItemDisplay>img{
+    max-width: 100px;
+    max-height: 100px;
+    }
+
+    .ItemDisplayDescription{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ItemDisplayDescription>button{
+        margin: 15px 0;
+    }
+ }
